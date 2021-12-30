@@ -1,0 +1,167 @@
+.app {
+    text-align: center;
+    max-width: 55rem;
+    margin: 0 auto;
+}
+
+.app__title {
+    margin: 7rem 0 0 0;
+    font-size: 5rem;
+    font-weight: 500;
+    text-shadow: 0 1.875rem 3.75rem var(--accent-primary-default);
+}
+
+.app__subtitle {
+    margin: 5rem 0 0 0;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.app__text {
+    max-width: 75%;
+    margin: 1rem auto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--foreground-dimmer);
+}
+
+.editor {
+    margin: 3rem 0 0 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    background: var(--background-default);
+    border: 1px solid var(--outline-dimmer);
+    text-align: left;
+}
+
+.editor__header {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--outline-dimmer);
+}
+
+.editor__header__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    color: var(--white);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.editor__header__heart {
+    background: var(--background-higher);
+    margin: 0 0.75rem 0 0;
+}
+
+.editor__header__run {
+    width: fit-content;
+    padding: 0 0.75rem;
+    font-size: 1rem;
+    background: var(--accent-positive-dimmer);
+}
+
+.editor__header__run ion-icon {
+    margin: 0 0.5rem 0 0;
+    font-size: 1.25rem;
+}
+
+.editor__content {
+    font-family: monospace;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+.editor__content__list {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.cursor {
+    color: var(--accent-primary-default);
+    font-weight: 700;
+    animation: 1s steps(2, end) infinite blink;
+}
+
+@keyframes blink {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem 0 1rem 0;
+}
+
+.grid__item {
+    padding: 1.5rem;
+    text-align: left;
+    border-radius: 0.5rem;
+    border: 2px solid var(--accent-primary-dimmest);
+    background: var(--background-default);
+    transition: border 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.grid__item:hover {
+    box-shadow: 0 0.5rem 1rem var(--accent-primary-default);
+    border-color: var(--accent-primary-default);
+    transform: scale(1.05);
+    background: var(--background-root);
+}
+
+.grid__item ion-icon {
+    font-size: 1.5rem;
+    color: var(--accent-primary-stronger);
+}
+
+.grid__item__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.grid__item__description {
+    color: var(--foreground-dimmer);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.footer {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+.footer__gmail, .footer__gmail:visited {
+    text-decoration: none;
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer__gmail ion-icon {
+    margin: 0 0.75rem 0 0;
+    transition: transform 0.3s ease;
+}
+
+.footer__gmail:hover ion-icon {
+    transform: translate(0.25rem, -0.25rem);
+}
+
